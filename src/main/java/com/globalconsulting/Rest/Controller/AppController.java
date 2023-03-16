@@ -85,11 +85,12 @@ public class AppController {
         }
 
         // Cerrar el navegador (Se recomienda comentar este metodo si se desean realizar varias solicitudes al servidor.
-        //driver.quit();
+        driver.quit();
 
-        // Devolver la respuesta al cliente en formato JSON
+        // Devolver la respuesta al cliente (De manera simple)
         //return new ResponseEntity<>(responseMessage, HttpStatus.OK);
 
+        // Devolver la respuesta al cliente en formato JSON
         Map<String, String> messages = new HashMap<>();
         messages.put("messages", responseMessage);
         return new ResponseEntity<Map>(messages, HttpStatus.OK);
